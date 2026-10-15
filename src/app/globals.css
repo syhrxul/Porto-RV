@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   RasaVisual — DESIGN TOKENS
+   Semua warna SOLID. Tidak ada gradasi di seluruh situs.
+   Ubah warna hanya di sini — jangan hardcode hex di komponen.
+   ============================================================ */
+@theme {
+  --color-primary: #004095; /* biru logo */
+  --color-primary-dark: #00306f; /* biru hover */
+  --color-ink: #0b1b33; /* teks utama */
+  --color-muted: #5b6b82; /* teks sekunder */
+  --color-line: #dce6f2; /* garis / border */
+  --color-mist: #f5f8fc; /* background section selang-seling */
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+
+  /* bayangan sangat halus, warna netral (bukan bayangan berwarna) */
+  --shadow-soft: 0 1px 2px rgb(11 27 51 / 0.04), 0 16px 40px -28px rgb(11 27 51 / 0.28);
+  --shadow-lift: 0 1px 2px rgb(11 27 51 / 0.05), 0 30px 60px -32px rgb(11 27 51 / 0.32);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background-color: #ffffff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    color: var(--color-ink);
+  }
+
+  /* judul section tidak tertutup navbar sticky saat di-scroll dari menu */
+  section[id] {
+    scroll-margin-top: 88px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: #ffffff;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Hormati preferensi pengguna yang tidak ingin animasi */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  /* kontainer tunggal untuk semua section */
+  .shell {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .shell {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* label kecil di atas judul section */
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  /* lebar baca nyaman untuk paragraf */
+  .measure {
+    max-width: 62ch;
+  }
 }
