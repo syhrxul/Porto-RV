@@ -36,7 +36,7 @@ export const navLinks = [
  * 3. HERO
  * -------------------------------------------------------------------------*/
 export const hero = {
-  eyebrow: "Sejak 2018 · Yogyakarta",
+  eyebrow: "Sejak 2023 · Yogyakarta",
   headline: ["Mengabadikan Momen,", "Menyampaikan Cerita"],
   // GANTI: subjudul ini yang paling pertama dibaca calon klien.
   subheadline:
@@ -44,11 +44,11 @@ export const hero = {
   primaryCta: { label: "Lihat Portofolio", href: "#portofolio" },
   secondaryCta: { label: "Hubungi Kami", href: "#kontak" },
   // GANTI: ganti /public/images/hero.jpg dengan foto karya terbaik Anda.
-  image: { src: "/images/hero.jpg", alt: "Dokumentasi suasana acara oleh RasaVisual" },
+  image: { src: "/images/landing.jpg", alt: "Dokumentasi suasana acara oleh RasaVisual" },
   // Angka kecil di bawah hero.
   highlights: [
-    { value: "450+", label: "Proyek selesai" },
-    { value: "120+", label: "Klien" },
+    { value: "200+", label: "Proyek selesai" },
+    { value: "200+", label: "Klien" },
     { value: "8", label: "Tahun berkarya" },
   ],
 };
@@ -133,17 +133,10 @@ export type PortfolioItem = {
 };
 
 export const portfolioItems: PortfolioItem[] = [
-  { id: "p01", title: "Panggung Seni Kampus", client: "Universitas", year: "2026", category: "event", src: "/images/portfolio-01.jpg", alt: "Dokumentasi panggung seni kampus" },
-  { id: "p02", title: "Akad di Pendopo", client: "Pasangan A & B", year: "2026", category: "wedding", src: "/images/portfolio-02.jpg", alt: "Dokumentasi akad pernikahan di pendopo" },
-  { id: "p03", title: "Laporan Tahunan", client: "PT Nusantara", year: "2025", category: "corporate", src: "/images/portfolio-03.jpg", alt: "Sesi foto korporat laporan tahunan" },
-  { id: "p04", title: "Katalog Skincare", client: "Ranum Beauty", year: "2026", category: "produk", src: "/images/portfolio-04.jpg", alt: "Foto produk katalog skincare" },
-  { id: "p05", title: "Seminar Nasional", client: "Fakultas Teknik", year: "2025", category: "event", src: "/images/portfolio-05.jpg", alt: "Dokumentasi seminar nasional" },
-  { id: "p06", title: "Resepsi Taman", client: "Pasangan C & D", year: "2025", category: "wedding", src: "/images/portfolio-06.jpg", alt: "Dokumentasi resepsi pernikahan di taman" },
-  { id: "p07", title: "Profil Perusahaan", client: "Kopi Lereng", year: "2026", category: "corporate", src: "/images/portfolio-07.jpg", alt: "Pengambilan video profil perusahaan" },
-  { id: "p08", title: "Seri Kopi Kemasan", client: "Kopi Lereng", year: "2026", category: "produk", src: "/images/portfolio-08.jpg", alt: "Foto produk kopi kemasan" },
-  { id: "p09", title: "Festival Kota", client: "Dinas Pariwisata", year: "2025", category: "event", src: "/images/portfolio-09.jpg", alt: "Dokumentasi festival kota" },
-  { id: "p10", title: "Pre-Wedding Bukit", client: "Pasangan E & F", year: "2026", category: "wedding", src: "/images/portfolio-10.jpg", alt: "Sesi pre-wedding di bukit" },
-  { id: "p11", title: "Kunjungan Pabrik", client: "PT Sinar Logam", year: "2025", category: "corporate", src: "/images/portfolio-11.jpg", alt: "Dokumentasi kunjungan pabrik" },
+  { id: "p01", title: "Dokumentasi Panggung Event Sekolah", client: "SMA Negeri 1 Purbalingga", year: "2024", category: "corporate", src: "/images/smansa.png", alt: "Dokumentasi panggung event sekolah" },
+  { id: "p02", title: "Wedding", client: "Pasangan", year: "2026", category: "wedding", src: "/images/wedding.jpg", alt: "Dokumentasi akad pernikahan di rumah pengantin" },
+  { id: "p03", title: "Jasa Edit pembuatan aplikasi", client: "Mahasiswa Universitas", year: "2026", category: "produk", src: "/images/jasa edit.png", alt: "Sesi foto korporat laporan tahunan" },
+  { id: "p04", title: "Film Cermin Retak", client: "-", year: "2024", category: "produk", src: "/images/film.webp", alt: "Pembuatan film cermin retak" },
   { id: "p12", title: "Event bersama Garuda, Mitsubishi, OJK, dan Pemerintah Purbalingga", client: "corporate", year: "2025", category: "corporate", src: "/images/portfolio-12.png", alt: "Event besar yang kami tangkap" },
 ];
 
@@ -160,12 +153,12 @@ export const about = {
     "Setiap hasil melewati proses seleksi dan penyuntingan warna yang konsisten, sehingga foto dan video terasa satu cerita — bukan kumpulan gambar yang berdiri sendiri.",
   ],
   // GANTI: ganti dengan foto tim / suasana kerja Anda.
-  image: { src: "/images/about.jpg", alt: "Tim RasaVisual sedang bekerja di lokasi" },
+  image: { src: "/images/about.png", alt: "Tim RasaVisual sedang bekerja di lokasi" },
   // Angka statistik — animasi count-up otomatis dari nilai ini.
   stats: [
-    { value: 450, suffix: "+", label: "Proyek selesai" },
-    { value: 120, suffix: "+", label: "Klien & institusi" },
-    { value: 8, suffix: "", label: "Tahun pengalaman" },
+    { value: 200, suffix: "+", label: "Proyek selesai" },
+    { value: 200, suffix: "+", label: "Klien & institusi" },
+    { value: 3, suffix: "", label: "Tahun pengalaman" },
     { value: 12, suffix: "", label: "Kota terjangkau" },
   ],
 };
@@ -257,8 +250,8 @@ export const testimonials = [
   {
     quote:
       "Timnya datang lebih awal dan hampir tidak terasa keberadaannya. Hasil fotonya membuat acara kami terlihat seperti yang kami bayangkan selama ini.",
-    name: "Anindita Prameswari",
-    role: "Klien Wedding, Yogyakarta",
+    name: "Nabil",
+    role: "Klien Event, Yogyakarta",
   },
   {
     quote:
